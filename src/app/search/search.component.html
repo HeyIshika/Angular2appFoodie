@@ -1,0 +1,51 @@
+<div  id="searchtab" >
+  <div class="row" >
+    <div id="searchbar">
+    <div class="form-inline">
+      
+        <label class="mr-sm-2" for="inlineFormCustomSelect" id="City">Bangalore</label>                        
+         <select class="form-control" #cuisine aria-placeholder="Cuisines">
+               <option value=50>Please Select A Cuisine</option>
+            <option value=25>Chinese</option>
+            <option value=82>Pizza</option>
+            <option value=50>North Indian</option>
+            <option value=55>Italian</option>
+            <option value=88>Rajasthani</option>
+            <option value=85>South Indian</option>
+            </select>
+        <button (click)="performSearch(cuisine)" class="btn btn-primary"> Search </button>
+            <br><br><br><br><br><br><br><br><br>
+          </div>
+      
+       <div class="row search-content">
+        <ul *ngFor="let rest of restaurants"> <li>
+          <div class="container"> 
+            <div class="row well">
+            
+                  
+              
+                  <div class="col-sm-3">
+                  <a href="#">
+                    <img class="img-responsive lolu" src="{{rest.restaurant.thumb}}" alt="How to click portraits">
+                  </a>
+                  </div>
+                  <div class="col-sm-9">
+                  
+                  
+                    
+                      <h2>{{rest.restaurant.name}} </h2>
+          
+                  
+                  <p>{{rest.restaurant.location.locality}}<br> Cost for two: {{rest.restaurant.average_cost_for_two}}</p>
+                  
+                  
+                  
+                  </div>
+            </div>
+          </div>
+        </li></ul>
+        </div>
+       
+     </div>
+  </div>
+</div>
